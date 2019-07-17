@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    discovery:
+      client:
+        simple:
+          instances:
+            demo:
+              - instance-id: 0
+                uri: http://localhost:8080
+              - instance-id: 1
+                uri: http://localhost:8082

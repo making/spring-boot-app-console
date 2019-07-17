@@ -11,9 +11,9 @@ cd /tmp
 curl https://start.spring.io/starter.tgz -d dependencies=web,actuator | tar -xzvf -
 ./mvnw clean package -DskipTests=true
 
+export VCAP_APPLICATION_APPLICATION_ID=demo
 export VCAP_APPLICATION_CF_API=http://localhost:9000
 export VCAP_SERVICES=
-export VCAP_APPLICATION_APPLICATION_ID=demo
 
 java -jar target/demo-0.0.1-SNAPSHOT.jar
 ```
